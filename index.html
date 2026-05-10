@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Language Conditioned Multi-Finger Dexterous Manipulation Enabled by Physical Compliance and Switching of Controllers">
+  <meta name="keywords" content="Imitation learning, Dexterous manipulation, Multi-finger hand">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Language Conditioned Multi-Finger Dexterous Manipulation Enabled by Physical Compliance and Switching of Controllers</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/create2.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- 
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> 
+
+-->
+  
+
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Language Conditioned Multi-Finger <br> Dexterous Manipulation Enabled by  Physical Compliance and Switching of Controllers 
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://chengpan-web.github.io/" style="color: black; text-decoration: none;">Cheng Pan</a><sup>1</sup>,
+            <span class="author-block">
+              <a href="https://sites.google.com/view/kaijunge" style="color: black; text-decoration: none;">Kai Junge</a><sup>1,2</sup>,
+              <!-- Kai Junge<sup>1</sup>,</span> -->
+            <span class="author-block">
+              <a href="https://sites.google.com/view/benhui-dai/about" style="color: black; text-decoration: none;">Benhui Dai</a><sup>1</sup>,
+            <span class="author-block">
+              <a href="https://people.epfl.ch/qinghua.guan?lang=en" style="color: black; text-decoration: none;">Qinghua Guan</a><sup>1</sup>,
+            <span class="author-block">
+              <a href="https://people.epfl.ch/josie.hughes?lang=en" style="color: black; text-decoration: none;">Josie Hughes</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>EPFL,</span>
+            <span class="author-block"><sup>2</sup>Embodied AI,</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./static/VLA_Diffusion_switch.pdf"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://vla-diffu-switch.github.io/"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=s8aLcmAqhRI"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://vla-diffu-switch.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code coming soon</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Human dexterity arises from the combined high-level task reasoning which is paired with finger-level dexterity control and physical compliance at the muscle and skin layers.
+          </p>
+          <p>
+            For robots, we see large Vision-Language-Action (VLA) models demonstrating text-conditioned high-level planning for a diverse range of manipulation tasks, typically performed with pincher grippers.
+            Smaller control policies developed through imitation learning are conversely showing success in more dexterous tasks using higher degree-of-freedom (DoF) grippers but for limited-scope tasks.
+            However, there are limited approaches for combining high-level cognition and reasoning with dexterous and robust low-level control, which requires both intelligent control and compliant robot design.
+            We propose a method inspired by the two-channel hypothesis of human motor control that combines these capabilities for dexterous manipulation, using a switching controller which integrates the best of high-level VLAs and smaller control models.
+            The coordination between these two channels is managed through an event-driven switching mechanism which monitors the subtask progression and completion, requiring only minimal demonstrations data by fine-tuning the VLA to predict event signals and training lightweight subtask-level dexterous policies.
+            This approach is applied to our custom compliant 13-DoF anthropomorphic dexterous robotic hand where we can modulate the compliance to systematically evaluate its impact on dexterity and robustness when combined with an autonomous policy.
+            With this, we show that only through the inclusion of hardware-level compliance in robotic fingers, which enables passive adaptation to disturbances and improves contact stability, can we mimic the robustness of human-like physical adaptation to tasks.
+            Specifically, the stability of finger-object contact is improved by over 38% through the introduction of compliance.
+            
+          </p>
+          <p>
+            The full methodology is validated across a range of language-conditioned dexterous tasks. To demonstrate the advantages of modularity, we show that the adaptation to additional dexterous skills and different compliant hands can be achieved without retraining the large VLA model.
+            This provides an efficient, scalable, and cross-embodiment approach to dexterity that actively leverages and exploits compliance whilst still leveraging the advantages of large AI models.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/s8aLcmAqhRI?si=U3cDIu-FXDrDDIIP" 
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- / Paper video. -->
+  </div>
+</section>
+  
+
+<section class="section no_top_pad">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/overview.png"    alt=""  style="display: block; width: 95%; margin-left: auto; margin-right: auto" >
+          <p>            
+            Switching-based dual-channel control for dexterous manipulation. (a), Two-channel hypothesis in neuroscience: human manipulation motion commands are generated by two neural pathways. The reaching channel (purple) governs arm transport, while the grasping channel (green) enables dexterous motion. (b), Combining the complementary strengths of large generalist models (VLA) and specialized low-level dexterous controllers, enhanced robustness through compliance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section no_top_pad">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Model Training</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/control_framework.png"   alt=""  style="display: block; width: 85%; margin-left: auto; margin-right: auto" >
+          <p>            
+            Bio-inspired dual-channel control pipeline, an event signal is used to switch between models.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section no_top_pad">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Teleoperation</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/teleoperation.png" style="width: 90%; margin-bottom: 15px; margin-top: 10px;" class="is-centered" >
+          <p>            
+            Teleoperation of the anthropomorphic robot hand for demonstration data collection.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- <h3 class="title is-4">multi-modal behavior</h3>
+
+    <div class="columns is-centered"> -->
+      
+      <!-- Diffu multi-modal 1 -->
+      <!-- <div class="column">
+        <div class="content">
+          <video id="diffu-multi1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/multi-modal_blueblock.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div> -->
+      <!--/ Diffu multi-modal 1 -->
+
+      <!-- Diffu multi-modal 2 -->
+      <!-- <div class="column">
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="diffu-multi2" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/multi-modal_tape.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+    <!--/ Diffu multi-modal 2 -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3">Pick-and-Place Tasks</h2>
+<!--     <h3 class="title is-4">bring robot hand to target object</h3> -->
+
+    <div class="columns is-centered">
+      
+      <!-- Combined video -->
+      <div class="column">
+        <div class="content">
+          <video id="vla-redpepper" autoplay controls muted loop playsinline height="0%">
+            <source src="./static/videos/Supplementary_Video_3_pickplace.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Combined video -->
+
+</div>
+</section>
+    
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3">Multi-Step Dexterous Manipulation Tasks</h2>
+<!--     <h3 class="title is-4">bring robot hand to target object</h3> -->
+
+    <div class="columns is-centered">
+      
+      <!-- Combined video -->
+      <div class="column">
+        <div class="content">
+          <video id="vla-redpepper" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Supplementary_Video_5_dex_demo.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Combined video -->
+
+</div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3">Recovery from Failures and Event Signal Response</h2>
+<!--     <h3 class="title is-4">bring robot hand to target object</h3> -->
+
+    <div class="columns is-centered">
+      
+      <!-- Combined video -->
+      <div class="column">
+        <div class="content">
+          <video id="vla-redpepper" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Supplementary_Video_4_recover.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Combined video -->
+
+</div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3">Model Adaptation via Modularity</h2>
+<!--     <h3 class="title is-4">bring robot hand to target object</h3> -->
+
+    <div class="columns is-centered">
+      
+      <!-- Combined video -->
+      <div class="column">
+        <div class="content">
+          <video id="vla-redpepper" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Supplementary_Video_6_modularity.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Combined video -->
+
+</div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3">Compliance-driven Robust Contact Against Disturbances</h2>
+<!--     <h3 class="title is-4">bring robot hand to target object</h3> -->
+
+    <div class="columns is-centered">
+      
+      <!-- Combined video -->
+      <div class="column">
+        <div class="content">
+          <video id="vla-redpepper" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Supplementary_Video_1_compliance.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Combined video -->
+
+</div>
+</section>
+
+
+
+<section class="section no_top_pad">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Manipulator Hardware</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/figures_handPaper_SI_photos_ADH.png"   alt=""  style="display: block; width: 50%; margin-left: auto; margin-right: auto" >
+          <img src="./static/images/figures_handPaper_SI_photos_softfingers.png"   alt=""  style="display: block; width: 50%; margin-left: auto; margin-right: auto" >
+          <p>            
+            Manipulator Hardware.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- 
+<section class="section">
+  
+  <div class="container is-max-desktop">
+  <div class="row" style="display: flex; width: 100%; justify-content: space-between;">
+
+    
+    <div style="flex: 1; font-size: 1em; line-height: 1.5em; padding-right: 20px;">
+      <h2 class="title is-3">Conclusions</h2>
+            <ul>
+                <li> 
+                    &bull; Combine VLA & Diffusion policy for multi-finger robot hand
+                    <ul>
+                        <li> &emsp; 1.  VLA
+                            <ul>
+                                <li> &emsp; &emsp; - Language-commanded</li>
+                                <li> &emsp; &emsp; - Generalizable</li>
+                            </ul>
+                        </li>
+                        <li> &emsp; 2. Diffusion policy
+                            <ul>
+                                <li> &emsp; &emsp; - Precise & smooth control</li>
+                                <li> &emsp; &emsp; - Multi-modal & recovery behavior</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                 <br> 
+                <li> &bull; Event signal for switching between two models</li>
+            </ul>
+
+    </div>
+
+    
+        <div style="flex: 1; text-align: center;">
+            <span class="image fit" style="margin-bottom: 0.5em;">
+                <img src="./static/images/conclusion.png" alt="Description of Image">
+            </span>
+        </div>
+      
+
+      
+    </div>
+    </div>
+</section> -->
+  
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{pan2024xxxxxxx,
+  author    = {Cheng Pan, Kai Junge, Josie Hughes},
+  title     = {xxx},
+  journal   = {xxxxx},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    
+<!--     
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/xxxxx.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/xxxxxxx" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> 
+    -->
+    
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
